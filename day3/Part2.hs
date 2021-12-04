@@ -5,7 +5,7 @@ main = do
   let oxygen = fromBinary $ head $ filterValues (>=) 0 txt
   let scrubber = fromBinary $ head $ filterValues (<) 0 txt
   let lifeSupport = oxygen * scrubber
-  print 
+  print [if ones >= zeroes then 1 else 0 | (ones,zeroes) <- calcColumn
   print oxygen
   print scrubber
   print lifeSupport
